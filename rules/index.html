@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load 3D GLB</title>
+    <style>
+        body { 
+            margin: 0; 
+            position: relative; 
+            background-image: url('../img/rules.jpg'); /* Set background image */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the background image */
+            overflow: hidden; /* Hide overflow to prevent scroll bars */
+        }
+        canvas { 
+            display: block; 
+            background-color: transparent; /* Make canvas transparent */
+        }
+        .title {
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            color: #4CAF50; /* Text color (green) */
+            font-size: 48px; /* Increased font size */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+            text-align: center; /* Center the text */
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border: 3px solid #FF5722; /* Orange border */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Space inside the border */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            z-index: 1; /* Ensure it's above the canvas */
+            opacity: 1; /* Make sure the title is visible */
+            animation: fadeIn 1s forwards; /* Fade-in animation */
+            animation-delay: 0s; /* Remove delay to show immediately */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .button-container {
+            position: absolute;
+            bottom: 20px; /* Position from the bottom */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+            display: flex; /* Use flexbox for button alignment */
+            gap: 10px; /* Space between buttons */
+        }
+        .button {
+            background-color: #FF5722; /* Button color */
+            color: white; /* Text color */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition on hover */
+        }
+        .button:hover {
+            background-color: #FF8A65; /* Lighter color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="button" id="homeBtn">Back</button>
+        <button class="button" id="playBtn">Play</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+        scene.add(ambientLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
+        directionalLight.position.set(1, 1, 1).normalize();
+        scene.add(directionalLight);
+
+        const loader = new THREE.GLTFLoader();
+        const models = []; // Array to hold model references
+        let currentIndex = 0; // Current model index
+
+        // Button event listeners
+        document.getElementById('homeBtn').addEventListener('click', () => {
+            window.location.href = '../load.html'; // Adjusted path to navigate correctly
+        });
+
+        document.getElementById('playBtn').addEventListener('click', () => {
+            window.location.href = '../Game/index.html'; // Adjusted path to navigate correctly
+        });
+    </script>
+</body>
+</html>

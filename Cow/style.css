@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  color: white;
+  overflow: hidden;
+}
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  
+}
+#score {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: pink; /* Pastel brown color */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#counter {
+  font-weight: bold;
+  
+}
+
+
+#end {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+  }
+  #end button {
+      background-color: rgb(231, 50, 18);
+      padding: 20px 50px 20px 50px;
+      font-family: inherit;
+      font-size: inherit;
+      animation : colorPop 2s linear infinite;
+    }
+#controls {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 25px;
+}
+#controls div {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 30px;
+}
+#controls button {
+  width: 100%;
+  background-color: pink;
+  border-radius: 3px;
+  
+}
+#controls button:first-of-type {
+  grid-column: 1/-1;
+}
+
+.credits {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  color: white;
+  background: pink;
+  border-radius: 60px;
+  width: 200px;
+  height: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 5px 10px 18px #57565646;
+  font-weight: bold;
+}
+
+i {
+  margin: 0 4px;
+}
+
+
+
+@keyframes colorPop {
+    0%, 100% {
+      color: white;
+      background: rgb(255, 182, 193); /* Light Pink */
+    }
+    10%, 90% {
+      color: black;
+      background: rgb(255, 240, 0); /* Pastel Yellow */
+    }
+    20%, 80% {
+      color: white;
+      background: rgb(173, 216, 230); /* Light Blue */
+    }
+    30%, 70% {
+      color: white;
+      background: rgb(255, 150, 150); /* Light Coral */
+    }
+    35%, 65% {
+      color: black;
+      background: rgb(255, 150, 150); /* Light Coral */
+    }
+    40%, 60% {
+      color: white;
+      background: rgb(204, 153, 255); /* Light Purple */
+    }
+    50% {
+      color: black;
+      background: rgb(255, 255, 255); /* White */
+    }
+  }
+  
+  

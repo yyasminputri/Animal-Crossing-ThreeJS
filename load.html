@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Crossing Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cooper+Hewitt:wght@700&display=swap'); /* Font Cooper */
+
+        html, body {
+            height: 100%; 
+            margin: 0; 
+            position: relative; 
+        }
+        body { 
+            background-image: url('img/home.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            overflow: hidden; 
+            font-family: 'Cooper Hewitt', sans-serif; /* Font Cooper */
+        }
+
+        /* Button style */
+        .play-button, .characters-button, .rules-button {
+            position: absolute;
+            left: 50%;
+            padding: 15px 30px;
+            font-size: 24px;
+            background-color: #FFD700; /* Kuning cerah */
+            color: #8B4513; /* Cokelat tua untuk teks */
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            transform: translateX(-50%); 
+        }
+
+        .play-button:hover, .characters-button:hover, .rules-button:hover {
+            background-color: #FFC107;
+            transform: translateX(-50%) scale(1.1); /* Perbesar saat hover tanpa bergeser */
+        }
+
+        .play-button:active, .characters-button:active, .rules-button:active {
+            transform: translateX(-50%) scale(1.15); /* Lebih besar saat dipencet tanpa geser */
+            font-weight: bold;
+        }
+
+        /* Position buttons at specific distances from the bottom */
+        .characters-button {
+            bottom: 250px; /* Jarak dari bawah untuk tombol Karakter */
+        }
+
+        .rules-button {
+            bottom: 150px; /* Jarak dari bawah untuk tombol Rules */
+        }
+
+        .play-button {
+            bottom: 50px; /* Jarak dari bawah untuk tombol Play */
+        }
+    </style>
+</head>
+<body>
+    <button class="characters-button" onclick="window.location.href='Characters/index.html'">🦊 CHARACTERS</button>
+    <button class="rules-button" onclick="window.location.href='rules/index.html'">📜 RULES</button>
+    <button class="play-button" onclick="window.location.href='Game/index.html'">▶️ PLAY</button>
+</body>
+</html>

@@ -72,6 +72,7 @@ Page ini digunakan user untuk memulai permainan game animal crossing. Player har
 ## Visual App
 ### Home Page
 <img width="1440" alt="Screenshot 2025-04-18 at 11 12 49" src="https://github.com/user-attachments/assets/2f3d5a34-6573-490f-886c-8119bf76ec06" />
+
 ### Play Page
 <img width="1440" alt="Screenshot 2025-04-18 at 11 13 35" src="https://github.com/user-attachments/assets/a581ad6d-ae7d-48e1-a230-d08056aa59ad" />
 <img width="1440" alt="Screenshot 2025-04-18 at 11 13 42" src="https://github.com/user-attachments/assets/ffd72c24-17d0-4b1e-b14c-fa6d81e97fe9" />

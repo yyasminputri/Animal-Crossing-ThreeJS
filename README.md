@@ -68,3 +68,11 @@ Page ini digunakan user untuk memulai permainan game animal crossing. Player har
 6. Lane : Fungsi untuk membuat lajur yang berisi objek tertentu, seperrti mobil, grass, dan road. Fungsi ini juga menangani kontrol pergerakan character.
 7. Move :  Fungsi ini menangani gerak character animal untuk ke depan, belakang, kanan, dan kiri. Jika user click arrow up, animal bergerak maju ke depan. Jika user click arrow down, animal bergerak maju ke belakang. Jika user click arrow left, animal bergerak maju ke kiri. Jika user click arrow right, animal bergerak maju ke kanan.
 8. Animate :  Loop animasi utama dalam permainan yang menggerakkan kendaraan dan karakter animal di dalam scene. Fungsi ini juga menangani score yang terus bertambah tiap karakter maju ke depan. Selain itu, fungsi ini menangani hit/collison antara animal dan kendaraan. Jika terjadi tabrakan, maka akan game over.
+
+## Visual App
+### Home Page
+<img width="1440" alt="Screenshot 2025-04-18 at 11 12 49" src="https://github.com/user-attachments/assets/2f3d5a34-6573-490f-886c-8119bf76ec06" />
+### Play Page
+<img width="1440" alt="Screenshot 2025-04-18 at 11 13 35" src="https://github.com/user-attachments/assets/a581ad6d-ae7d-48e1-a230-d08056aa59ad" />
+<img width="1440" alt="Screenshot 2025-04-18 at 11 13 42" src="https://github.com/user-attachments/assets/ffd72c24-17d0-4b1e-b14c-fa6d81e97fe9" />
+
